@@ -8,7 +8,10 @@ matrix:
       env: DIST=bionic
 
 install: true
-script: time ruby demo.rb
+script: 
+  - time ruby demo.rb &
+  - time ruby demo.rb &
+  - wait
 
 notifications:
   email: false
