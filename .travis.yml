@@ -1,73 +1,82 @@
 language: ruby
-
+rvm:
+  - 2.2
+  - jruby
+  - truffleruby
+  - 2.0.0-p247
+  
 matrix:
   include:
     - env: JOB=1
     - env: JOB=2
-    - env: JOB=3
-    - env: JOB=4
-    - env: JOB=5
-    - env: JOB=6
-    - env: JOB=7
-    - env: JOB=8
-    - env: JOB=9
-    - env: JOB=10
-    - env: JOB=11
-    - env: JOB=12
-    - env: JOB=13
-    - env: JOB=14
-    - env: JOB=15
-    - env: JOB=16
-    - env: JOB=17
-    - env: JOB=18
-    - env: JOB=19
-    - env: JOB=20
-    - env: JOB=21
-    - env: JOB=22
-    - env: JOB=23
-    - env: JOB=24
-    - env: JOB=25
-    - env: JOB=26
-    - env: JOB=27
-    - env: JOB=28
-    - env: JOB=29
-    - env: JOB=30
-    - env: JOB=31
-    - env: JOB=32
-    - env: JOB=33
-    - env: JOB=34
-    - env: JOB=35
-    - env: JOB=36
-    - env: JOB=37
-    - env: JOB=38
-    - env: JOB=39
-    - env: JOB=40
-    - env: JOB=41
-    - env: JOB=42
-    - env: JOB=43
-    - env: JOB=44
-    - env: JOB=45
-    - env: JOB=46
-    - env: JOB=47
-    - env: JOB=48
-    - env: JOB=49
-    - env: JOB=50
-    - env: JOB=51
-    - env: JOB=52
-    - env: JOB=53
-    - env: JOB=54
-    - env: JOB=55
-    - env: JOB=56
-    - env: JOB=57
-    - env: JOB=58
-    - env: JOB=59
-    - env: JOB=60
-    
+#     - env: JOB=3
+#     - env: JOB=4
+#     - env: JOB=5
+#     - env: JOB=6
+#     - env: JOB=7
+#     - env: JOB=8
+#     - env: JOB=9
+#     - env: JOB=10
+#     - env: JOB=11
+#     - env: JOB=12
+#     - env: JOB=13
+#     - env: JOB=14
+#     - env: JOB=15
+#     - env: JOB=16
+#     - env: JOB=17
+#     - env: JOB=18
+#     - env: JOB=19
+#     - env: JOB=20
+#     - env: JOB=21
+#     - env: JOB=22
+#     - env: JOB=23
+#     - env: JOB=24
+#     - env: JOB=25
+#     - env: JOB=26
+#     - env: JOB=27
+#     - env: JOB=28
+#     - env: JOB=29
+#     - env: JOB=30
+#     - env: JOB=31
+#     - env: JOB=32
+#     - env: JOB=33
+#     - env: JOB=34
+#     - env: JOB=35
+#     - env: JOB=36
+#     - env: JOB=37
+#     - env: JOB=38
+#     - env: JOB=39
+#     - env: JOB=40
+#     - env: JOB=41
+#     - env: JOB=42
+#     - env: JOB=43
+#     - env: JOB=44
+#     - env: JOB=45
+#     - env: JOB=46
+#     - env: JOB=47
+#     - env: JOB=48
+#     - env: JOB=49
+#     - env: JOB=50
+#     - env: JOB=51
+#     - env: JOB=52
+#     - env: JOB=53
+#     - env: JOB=54
+#     - env: JOB=55
+#     - env: JOB=56
+#     - env: JOB=57
+#     - env: JOB=58
+#     - env: JOB=59
+#     - env: JOB=60
+
+cache:
+  directories:
+   - /home/travis/.rvm/
+     
 install: true
 script: 
   - time ruby demo.rb &
-  - time ruby demo.rb &
-  - wait
+  #- time ruby demo.rb &
+  #- wait
 
 notifications:
   email: false
