@@ -68,8 +68,7 @@ cache:
      
 install: true
 script:
-  - rvm install 2.3.1
-  - rvm install 2.5.4
+  - bundle install
   - time ruby demo.rb
   #- time ruby demo.rb &
   #- wait
