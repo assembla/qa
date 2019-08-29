@@ -68,7 +68,7 @@ cache:
      
 install: true
 script:
-  - bundle install
+  - bundle install --path=vendor/bundle
   - time ruby demo.rb
   #- time ruby demo.rb &
   #- wait
