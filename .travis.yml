@@ -1,10 +1,4 @@
 language: ruby
-rvm:
-  - 2.2
-  - jruby
-  - truffleruby
-  - 2.6.3
-  - 2.6.2
   
 matrix:
   include:
@@ -74,8 +68,10 @@ cache:
    - /home/travis/.rvm/
      
 install: true
-script: 
-  - time ruby demo.rb &
+script:
+  - rvm install 2.3.1
+  - rvm install 2.5.4
+  - time ruby demo.rb
   #- time ruby demo.rb &
   #- wait
 
