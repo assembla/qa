@@ -64,8 +64,7 @@ matrix:
 #     - env: JOB=60
 
 cache:
-  directories:
-   - /home/travis/.rvm/
+  bundler: true
      
 install: true
 script:
