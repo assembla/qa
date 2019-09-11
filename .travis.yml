@@ -3,7 +3,7 @@ language: ruby
 matrix:
   include:
     - env: JOB=1
-#    - env: JOB=2
+    - env: JOB=2
 #    - env: JOB=3
 #     - env: JOB=4
 #     - env: JOB=5
