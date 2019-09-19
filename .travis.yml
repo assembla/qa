@@ -13,7 +13,9 @@ jobs:
     - stage: deploy
       script: echo Deploy
       # Keep in mind to overwrite these here
-      rvm: 2.3
+      rvm: 
+        - 2.3
+        - 2.6.3
       env: 
         - FOO=foo1
         - FOO=foo2
