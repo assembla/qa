@@ -9,7 +9,7 @@ script: echo $FOO
 jobs:
   include:
     - stage: deploy
-      script: echo Deploy
+      script:
       # Keep in mind to overwrite these here
       - cat /proc/cpuinfo
       - free -m
