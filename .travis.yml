@@ -1,10 +1,8 @@
 rvm:
-  - 2.2
-  - 2.3
+  - 2.6
 
 env:
   - FOO=foo
-  - FOO=bar
 
 script: echo $FOO
 
@@ -13,6 +11,8 @@ jobs:
     - stage: deploy
       script: echo Deploy
       # Keep in mind to overwrite these here
+      - cat /proc/cpuinfo
+      - free -m
       rvm: 
         - 2.3
         - 2.6.3
