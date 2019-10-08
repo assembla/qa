@@ -1,6 +1,6 @@
 language: generic
 dist: bionic
-arch: amd64
+arch: arm64
 
 install: skip
 
