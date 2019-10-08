@@ -1,21 +1,25 @@
-rvm:
-  - 2.6
+language: generic
+dist: bionic
 
-env:
-  - FOO=foo
+install: skip
 
-script: echo $FOO
+script:
+# Environment information
+- echo "==> Environment information"
+- uname -a
+- grep ^processor /proc/cpuinfo
+- free -m
+- df -h
+- df -Th
 
-jobs:
-  include:
-    - stage: deploy
-      script:
-      # Keep in mind to overwrite these here
-      - cat /proc/cpuinfo
-      - free -m
-      rvm: 
-        - 2.3
-        - 2.6.3
-      env: 
-        - FOO=foo1
-        - FOO=foo2
+# Snaps
+- echo "==> Snaps"
+- sudo snap install core || true
+- sudo snap install core
+- sudo snap install hello-world
+- hello-world
+
+# Docker
+- echo "==> Docker"
+- sudo docker info
+- sudo docker run hello-world
